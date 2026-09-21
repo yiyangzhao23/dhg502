@@ -1,9 +1,18 @@
 # 明史 Text Analysis — DHG502 workflow check
 
-A small end-to-end check of the course workflow: a GitHub repository opened in
-a Codespace, where an AI coding assistant (opencode running **GLM-5.3-Flash**)
-writes and runs a script that analyses a historical source, and the results are
-published as a web page.
+**Name:** Ci Ci · **Course:** DHG502
+
+**What I did:** I used opencode (running the **GLM-5.3-Flash** model) to write
+and run a Python script that downloads the plain-text 明史 from the Kanripo
+project and reports its most frequent characters, word-like bigrams, the
+treacherous officials named in the 奸臣傳, official titles, and how key terms are
+distributed across the text, and I published the results as a web page.
+
+## Citation
+
+> 張廷玉 et al. 《明史》 (*History of the Ming*). 1739. Plain-text transcription,
+> Kanripo Digital Archive, KR2a0038.
+> <https://github.com/kanripo/KR2a0038> (accessed 21 September 2026).
 
 ## The source
 
