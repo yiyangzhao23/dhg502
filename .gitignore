@@ -1,0 +1,15 @@
+# Local download of the Kanripo source text (rebuild with analyze_mingshi.py)
+data/
+
+# Python
+__pycache__/
+*.pyc
+
+# Secrets — never commit your API key
+.env
+.env.*
+*.key
+secrets*
+
+# macOS
+.DS_Store
