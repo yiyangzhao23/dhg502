@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Collocates</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: -apple-system, system-ui, sans-serif; margin: 2rem; }
+  h1 { font-size: 1.3rem; }
+  select { font-size: 1rem; padding: .3rem; margin-bottom: 1rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  th, td { border: 1px solid #8884; padding: .35rem .5rem; text-align: left; }
+  th { cursor: pointer; user-select: none; background: #8881; position: sticky; top: 0; }
+  th::after { content: ""; }
+  th.sort-asc::after { content: " \2191"; }
+  th.sort-desc::after { content: " \2193"; }
+  tr:nth-child(even) { background: #8881; }
+  .wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<h1>Collocates of 钱</h1>
+<select id="run"></select>
+<div class="wrap"><table id="table"></table></div>
+<script>
+const DATA = {"sentence": {"label": "Sentence", "columns": ["target", "collocate", "exp_local", "obs_local", "ratio_local", "obs_global", "p_value", "log_likelihood", "log_dice", "adjusted_p_value"], "rows": [{"target": "钱", "collocate": "铸", "exp_local": 1.5246842709529276, "obs_local": 9, "ratio_local": 5.902861445783133, "obs_global": 16, "p_value": 2.806973924049996e-06, "log_likelihood": 22.56624449590726, "log_dice": 11.540568381362704, "adjusted_p_value": 7.859526987339989e-05}, {"target": "钱", "collocate": "并", "exp_local": 4.002296211251435, "obs_local": 11, "ratio_local": 2.748422260470453, "obs_global": 42, "p_value": 0.0011123206361649, "log_likelihood": 10.327317538937912, "log_dice": 11.493647333975211, "adjusted_p_value": 0.0088985650893192}, {"target": "钱", "collocate": "新", "exp_local": 0.8576349024110218, "obs_local": 7, "ratio_local": 8.1619812583668, "obs_global": 9, "p_value": 1.7290073472697516e-06, "log_likelihood": 24.29654038179723, "log_dice": 11.283792966000592, "adjusted_p_value": 7.859526987339989e-05}, {"target": "钱", "collocate": "旧", "exp_local": 1.0482204362801375, "obs_local": 6, "ratio_local": 5.723986856516977, "obs_global": 11, "p_value": 0.0001968526520232, "log_likelihood": 14.389717301593723, "log_dice": 11.030373649043518, "adjusted_p_value": 0.0036745828377679}, {"target": "钱", "collocate": "乾元", "exp_local": 0.7623421354764638, "obs_local": 5, "ratio_local": 6.558734939759036, "obs_global": 8, "p_value": 0.0003116546839226, "log_likelihood": 13.76903842824012, "log_dice": 10.814133454688664, "adjusted_p_value": 0.0043631655749177}, {"target": "钱", "collocate": "六年", "exp_local": 1.2388059701492538, "obs_local": 5, "ratio_local": 4.036144578313253, "obs_global": 13, "p_value": 0.0048631185195768, "log_likelihood": 7.981010612733046, "log_dice": 10.736965594166206, "adjusted_p_value": 0.0247576942814819}, {"target": "钱", "collocate": "铜", "exp_local": 0.5717566016073479, "obs_local": 4, "ratio_local": 6.995983935742972, "obs_global": 6, "p_value": 0.0009949900967209, "log_likelihood": 11.728414543620325, "log_dice": 10.524266569033603, "adjusted_p_value": 0.0088985650893192}, {"target": "钱", "collocate": "十文", "exp_local": 0.2858783008036739, "obs_local": 3, "ratio_local": 10.49397590361446, "obs_global": 3, "p_value": 0.0008371818022824, "log_likelihood": 14.204227680277622, "log_dice": 10.158697746019058, "adjusted_p_value": 0.0088985650893192}, {"target": "钱", "collocate": "新钱", "exp_local": 0.3811710677382319, "obs_local": 3, "ratio_local": 7.870481927710844, "obs_global": 4, "p_value": 0.0031172483697848, "log_likelihood": 9.899050829210625, "log_dice": 10.142019004872427, "adjusted_p_value": 0.0174565908707952}, {"target": "钱", "collocate": "轻", "exp_local": 0.3811710677382319, "obs_local": 3, "ratio_local": 7.870481927710844, "obs_global": 4, "p_value": 0.0031172483697848, "log_likelihood": 9.899050829210625, "log_dice": 10.142019004872427, "adjusted_p_value": 0.0174565908707952}, {"target": "钱", "collocate": "一当", "exp_local": 0.3811710677382319, "obs_local": 3, "ratio_local": 7.870481927710844, "obs_global": 4, "p_value": 0.0031172483697848, "log_likelihood": 9.899050829210625, "log_dice": 10.142019004872427, "adjusted_p_value": 0.0174565908707952}, {"target": "钱", "collocate": "重", "exp_local": 0.4764638346727899, "obs_local": 3, "ratio_local": 6.296385542168674, "obs_global": 5, "p_value": 0.0072566079744548, "log_likelihood": 7.861354113110705, "log_dice": 10.125530882083858, "adjusted_p_value": 0.0290264318978192}, {"target": "钱", "collocate": "开元通宝", "exp_local": 0.4764638346727899, "obs_local": 3, "ratio_local": 6.296385542168674, "obs_global": 5, "p_value": 0.0072566079744548, "log_likelihood": 7.861354113110705, "log_dice": 10.125530882083858, "adjusted_p_value": 0.0290264318978192}, {"target": "钱", "collocate": "时价", "exp_local": 0.4764638346727899, "obs_local": 3, "ratio_local": 6.296385542168674, "obs_global": 5, "p_value": 0.0072566079744548, "log_likelihood": 7.861354113110705, "log_dice": 10.125530882083858, "adjusted_p_value": 0.0290264318978192}]}, "window10": {"label": "Window · horizon 10", "columns": ["target", "collocate", "exp_local", "obs_local", "ratio_local", "obs_global", "p_value", "log_likelihood", "log_dice", "adjusted_p_value"], "rows": [{"target": "钱", "collocate": "铸", "exp_local": 1.620382042082808, "obs_local": 9, "ratio_local": 5.554245706420921, "obs_global": 17, "p_value": 7.515348703122546e-06, "log_likelihood": 20.46597869263768, "log_dice": 11.428458015041166, "adjusted_p_value": 0.0001766106945233}, {"target": "钱", "collocate": "并", "exp_local": 4.003296809851643, "obs_local": 10, "ratio_local": 2.4979411907184037, "obs_global": 42, "p_value": 0.005132130157652, "log_likelihood": 7.357150077712934, "log_dice": 11.27753397552891, "adjusted_p_value": 0.0272689888636128}, {"target": "钱", "collocate": "新", "exp_local": 0.8578493163967807, "obs_local": 7, "ratio_local": 8.159941223013451, "obs_global": 9, "p_value": 2.123186675306969e-06, "log_likelihood": 23.816227273113057, "log_dice": 11.177998301977992, "adjusted_p_value": 9.978977373942754e-05}, {"target": "钱", "collocate": "旧", "exp_local": 1.0484824978182876, "obs_local": 6, "ratio_local": 5.7225561823730695, "obs_global": 11, "p_value": 0.000224038469701, "log_likelihood": 14.077756081367696, "log_dice": 10.926751017969362, "adjusted_p_value": 0.003509936025316}, {"target": "钱", "collocate": "乾元", "exp_local": 0.7625327256860274, "obs_local": 5, "ratio_local": 6.557095625635808, "obs_global": 8, "p_value": 0.0003411778808012, "log_likelihood": 13.541756402900004, "log_dice": 10.707218250772154, "adjusted_p_value": 0.0040088400994151}, {"target": "钱", "collocate": "恶钱", "exp_local": 1.2391156792397944, "obs_local": 5, "ratio_local": 4.035135769622037, "obs_global": 13, "p_value": 0.0052217212717556, "log_likelihood": 7.8009411267245, "log_dice": 10.635427567704143, "adjusted_p_value": 0.0272689888636128}, {"target": "钱", "collocate": "十文", "exp_local": 0.2859497721322602, "obs_local": 3, "ratio_local": 10.491353001017297, "obs_global": 3, "p_value": 0.0008635854250743, "log_likelihood": 14.11160056962207, "log_dice": 10.045803689613123, "adjusted_p_value": 0.008117702995699}, {"target": "钱", "collocate": "轻", "exp_local": 0.3812663628430137, "obs_local": 3, "ratio_local": 7.86851475076297, "obs_global": 4, "p_value": 0.0032080816471612, "log_likelihood": 9.812688167631311, "log_dice": 10.030373649043518, "adjusted_p_value": 0.0215399767737971}, {"target": "钱", "collocate": "一当", "exp_local": 0.3812663628430137, "obs_local": 3, "ratio_local": 7.86851475076297, "obs_global": 4, "p_value": 0.0032080816471612, "log_likelihood": 9.812688167631311, "log_dice": 10.030373649043518, "adjusted_p_value": 0.0215399767737971}, {"target": "钱", "collocate": "开元通宝", "exp_local": 0.476582953553767, "obs_local": 3, "ratio_local": 6.294811800610376, "obs_global": 5, "p_value": 0.0074513264339129, "log_likelihood": 7.781041789459815, "log_dice": 10.015106892390207, "adjusted_p_value": 0.0318374856721734}, {"target": "钱", "collocate": "时价", "exp_local": 0.476582953553767, "obs_local": 3, "ratio_local": 6.294811800610376, "obs_global": 5, "p_value": 0.0074513264339129, "log_likelihood": 7.781041789459815, "log_dice": 10.015106892390207, "adjusted_p_value": 0.0318374856721734}, {"target": "钱", "collocate": "好", "exp_local": 0.5718995442645205, "obs_local": 3, "ratio_local": 5.245676500508647, "obs_global": 6, "p_value": 0.0138510462914093, "log_likelihood": 6.393201811981417, "log_dice": 10.0, "adjusted_p_value": 0.0464999411211598}, {"target": "钱", "collocate": "重", "exp_local": 0.5718995442645205, "obs_local": 3, "ratio_local": 5.245676500508647, "obs_global": 6, "p_value": 0.0138510462914093, "log_likelihood": 6.393201811981417, "log_dice": 10.0, "adjusted_p_value": 0.0464999411211598}, {"target": "钱", "collocate": "铜", "exp_local": 0.5718995442645205, "obs_local": 3, "ratio_local": 5.245676500508647, "obs_global": 6, "p_value": 0.0138510462914093, "log_likelihood": 6.393201811981417, "log_dice": 10.0, "adjusted_p_value": 0.0464999411211598}]}, "window5": {"label": "Window · horizon 5", "columns": ["target", "collocate", "exp_local", "obs_local", "ratio_local", "obs_global", "p_value", "log_likelihood", "log_dice", "adjusted_p_value"], "rows": [{"target": "钱", "collocate": "新", "exp_local": 0.6004072529816736, "obs_local": 7, "ratio_local": 11.65875322997416, "obs_global": 9, "p_value": 1.8264424367520378e-07, "log_likelihood": 28.708680180204055, "log_dice": 11.177998301977992, "adjusted_p_value": 4.383461848204891e-06}, {"target": "钱", "collocate": "铸", "exp_local": 1.1341025889653835, "obs_local": 7, "ratio_local": 6.172281121751026, "obs_global": 17, "p_value": 6.14231587592366e-05, "log_likelihood": 16.303039447991416, "log_dice": 11.065887935656455, "adjusted_p_value": 0.0004926165739298}, {"target": "钱", "collocate": "并", "exp_local": 2.801900513914477, "obs_local": 8, "ratio_local": 2.855204872646733, "obs_global": 42, "p_value": 0.0058672057459897, "log_likelihood": 7.1544439442344725, "log_dice": 10.955605880641546, "adjusted_p_value": 0.0176016172379692}, {"target": "钱", "collocate": "乾元", "exp_local": 0.5336953359837099, "obs_local": 5, "ratio_local": 9.368640988372093, "obs_global": 8, "p_value": 6.157707174123544e-05, "log_likelihood": 16.934106438125372, "log_dice": 10.707218250772154, "adjusted_p_value": 0.0004926165739298}, {"target": "钱", "collocate": "旧", "exp_local": 0.7338310869776011, "obs_local": 4, "ratio_local": 5.450845665961944, "obs_global": 11, "p_value": 0.0044376939899845, "log_likelihood": 8.221609577858954, "log_dice": 10.341788517248204, "adjusted_p_value": 0.0174029125600213}, {"target": "钱", "collocate": "恶钱", "exp_local": 0.8672549209735285, "obs_local": 4, "ratio_local": 4.612254025044723, "obs_global": 13, "p_value": 0.0086384113953864, "log_likelihood": 6.8687570403130165, "log_dice": 10.31349947281678, "adjusted_p_value": 0.0230357637210304}, {"target": "钱", "collocate": "开元通宝", "exp_local": 0.3335595849898187, "obs_local": 3, "ratio_local": 8.993895348837208, "obs_global": 5, "p_value": 0.0026700589969656, "log_likelihood": 9.801370355871011, "log_dice": 10.015106892390207, "adjusted_p_value": 0.0128162831854352}, {"target": "钱", "collocate": "时价", "exp_local": 0.3335595849898187, "obs_local": 3, "ratio_local": 8.993895348837208, "obs_global": 5, "p_value": 0.0026700589969656, "log_likelihood": 9.801370355871011, "log_dice": 10.015106892390207, "adjusted_p_value": 0.0128162831854352}, {"target": "钱", "collocate": "好", "exp_local": 0.4002715019877824, "obs_local": 3, "ratio_local": 7.494912790697675, "obs_global": 6, "p_value": 0.0050758494966729, "log_likelihood": 8.351256218207277, "log_dice": 10.0, "adjusted_p_value": 0.0174029125600213}, {"target": "钱", "collocate": "贱", "exp_local": 0.6004072529816736, "obs_local": 3, "ratio_local": 4.996608527131783, "obs_global": 9, "p_value": 0.0183279395115895, "log_likelihood": 5.6244563282779065, "log_dice": 9.955605880641546, "adjusted_p_value": 0.043987054827815}]}};
+const runSelect = document.getElementById("run");
+const table = document.getElementById("table");
+let sortKey = null, sortDir = -1;
+
+Object.keys(DATA).forEach(key => {
+  const opt = document.createElement("option");
+  opt.value = key; opt.textContent = DATA[key].label;
+  runSelect.appendChild(opt);
+});
+
+function sortRows(rows) {
+  if (sortKey === null) return rows;
+  const isNum = rows.length && typeof rows[0][sortKey] === "number";
+  return rows.slice().sort((a, b) => {
+    const x = a[sortKey], y = b[sortKey];
+    if (x === null) return 1;
+    if (y === null) return -1;
+    if (isNum) return (x - y) * sortDir;
+    return String(x).localeCompare(String(y)) * sortDir;
+  });
+}
+
+function render() {
+  const entry = DATA[runSelect.value];
+  const rows = sortRows(entry.rows);
+  const cols = entry.columns;
+  let html = "<thead><tr>";
+  cols.forEach(c => {
+    const cls = c === sortKey ? (sortDir < 0 ? "sort-desc" : "sort-asc") : "";
+    html += `<th class="${cls}" data-col="${c}">${c}</th>`;
+  });
+  html += "</tr></thead><tbody>";
+  rows.forEach(r => {
+    html += "<tr>";
+    cols.forEach(c => {
+      let v = r[c];
+      if (typeof v === "number" && !Number.isInteger(v)) v = v.toFixed(4);
+      html += `<td>${v === null ? "" : v}</td>`;
+    });
+    html += "</tr>";
+  });
+  html += "</tbody>";
+  table.innerHTML = html;
+  table.querySelectorAll("th").forEach(th => {
+    th.addEventListener("click", () => {
+      const col = th.dataset.col;
+      if (col === sortKey) { sortDir *= -1; }
+      else { sortKey = col; sortDir = -1; }
+      render();
+    });
+  });
+}
+
+runSelect.addEventListener("change", render);
+render();
+</script>
+</body>
+</html>

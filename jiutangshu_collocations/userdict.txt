@@ -1,0 +1,62 @@
+# jieba user dictionary for 舊唐書·食貨志 (simplified characters, one entry per line).
+# Everything here is written in SIMPLIFIED characters because segment.py
+# converts the whole text with opencc before segmentation.
+#
+# Target word for this project.
+税
+
+# Fiscal institutions, offices and terms the question depends on
+两税
+租庸调
+租庸
+均田
+青苗
+榷盐
+榷酒
+榷茶
+茶税
+盐铁
+漕运
+转运
+进奉
+羡余
+义仓
+常平
+折纳
+上供
+留州
+留使
+盐商
+户口
+户籍
+户等
+九等
+开元通宝
+恶钱
+铸钱
+行用
+见钱
+铅锡
+铅锡钱
+乾封泉宝
+五铢钱
+榷课
+榷率
+
+# People named in the treatise
+杨炎
+裴耀卿
+刘晏
+宇文融
+杨国忠
+第五琦
+杨崇礼
+韦坚
+王鉷
+张滂
+裴延龄
+王涯
+崔戎
+李巽
+皇甫镈
+裴休

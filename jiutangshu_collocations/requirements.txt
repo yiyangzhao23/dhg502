@@ -1,0 +1,3 @@
+jieba
+opencc-python-reimplemented
+qhchina
